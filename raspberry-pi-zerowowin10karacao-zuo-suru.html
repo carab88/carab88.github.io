@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>My First Review - curry and rice and beer !</title>
+    <title>Raspberry Pi ZeroをWin10から操作する - curry and rice and beer !</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,18 +9,18 @@
 
 
 
-<link rel="canonical" href="https://carab88.github.io/0.html">
+<link rel="canonical" href="https://carab88.github.io/raspberry-pi-zerowowin10karacao-zuo-suru.html">
 
         <meta name="author" content="carab88" />
-        <meta name="description" content="Curry And Rice And Beer !" />
+        <meta name="description" content="Raspberry Pi ZeroをWin10から操作する やってみたのメモ MicroSDカード、ケーブルを探す Raspberry Pi ZeroをWin10から操作するために必要なもの - コネクタ形状【USB A（オス）】 ― 【USB Micro-B（オス）】 でデータ転送ができるケーブル 前職が出張多かった関係でケーブルが探すといくつか出てきた microSDカード 家の中を探して見つかったのは容量8G NEologD辞書を入れるとぎりぎりの容量 写真家じゃないので64Gとか持っていない。 Win10からSSH接続するための設定 Raspbian LiteのイメージファイルをSDカードに書き込み USB On-the-Go Ethernet モードで起動させるための設定 SDカード（boot）直下のファイルを修正、配置 config.txtの追記 config.txt最終行にdtoverlay=dwc2を追加 commandline.txtの修正 rootwaitの後に modules-load=dwc2,g_etherを追加 空のsshファイルの作成 …" />
 
         <meta property="og:site_name" content="curry and rice and beer !" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="My First Review"/>
-        <meta property="og:url" content="https://carab88.github.io/0.html"/>
-        <meta property="og:description" content="Curry And Rice And Beer !"/>
+        <meta property="og:title" content="Raspberry Pi ZeroをWin10から操作する"/>
+        <meta property="og:url" content="https://carab88.github.io/raspberry-pi-zerowowin10karacao-zuo-suru.html"/>
+        <meta property="og:description" content="Raspberry Pi ZeroをWin10から操作する やってみたのメモ MicroSDカード、ケーブルを探す Raspberry Pi ZeroをWin10から操作するために必要なもの - コネクタ形状【USB A（オス）】 ― 【USB Micro-B（オス）】 でデータ転送ができるケーブル 前職が出張多かった関係でケーブルが探すといくつか出てきた microSDカード 家の中を探して見つかったのは容量8G NEologD辞書を入れるとぎりぎりの容量 写真家じゃないので64Gとか持っていない。 Win10からSSH接続するための設定 Raspbian LiteのイメージファイルをSDカードに書き込み USB On-the-Go Ethernet モードで起動させるための設定 SDカード（boot）直下のファイルを修正、配置 config.txtの追記 config.txt最終行にdtoverlay=dwc2を追加 commandline.txtの修正 rootwaitの後に modules-load=dwc2,g_etherを追加 空のsshファイルの作成 …"/>
         <meta property="article:published_time" content="2020-05-22" />
-            <meta property="article:section" content="0" />
+            <meta property="article:section" content="misc" />
             <meta property="article:author" content="carab88" />
 
 
@@ -35,8 +35,8 @@
         <link href="https://carab88.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="curry and rice and beer ! ATOM Feed"/>
 
-        <link href="https://carab88.github.io/feeds/0.atom.xml" type="application/atom+xml" rel="alternate"
-              title="curry and rice and beer ! 0 ATOM Feed"/>
+        <link href="https://carab88.github.io/feeds/misc.atom.xml" type="application/atom+xml" rel="alternate"
+              title="curry and rice and beer ! misc ATOM Feed"/>
 </head>
 <body>
 
@@ -54,10 +54,10 @@ curry and rice and beer !            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li >
                             <a href="https://carab88.github.io/category/0.html">0</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="https://carab88.github.io/category/misc.html">Misc</a>
                         </li>
             </ul>
@@ -79,10 +79,10 @@ curry and rice and beer !            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="https://carab88.github.io/0.html"
+                    <a href="https://carab88.github.io/raspberry-pi-zerowowin10karacao-zuo-suru.html"
                        rel="bookmark"
-                       title="Permalink to My First Review">
-                        My First Review
+                       title="Permalink to Raspberry Pi ZeroをWin10から操作する">
+                        Raspberry Pi ZeroをWin10から操作する
                     </a>
                 </h1>
             </header>
@@ -102,7 +102,62 @@ curry and rice and beer !            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Curry And Rice And Beer !</p>
+                <h1>Raspberry Pi ZeroをWin10から操作する</h1>
+<p>やってみたのメモ</p>
+<h2>MicroSDカード、ケーブルを探す</h2>
+<p>Raspberry Pi ZeroをWin10から操作するために必要なもの
+- コネクタ形状【USB A（オス）】 ― 【USB Micro-B（オス）】 でデータ転送ができるケーブル<br>
+前職が出張多かった関係でケーブルが探すといくつか出てきた</p>
+<ul>
+<li>microSDカード<br>
+家の中を探して見つかったのは容量8G<br>
+NEologD辞書を入れるとぎりぎりの容量<br>
+写真家じゃないので64Gとか持っていない。</li>
+</ul>
+<h2>Win10からSSH接続するための設定</h2>
+<ul>
+<li>
+<p>Raspbian LiteのイメージファイルをSDカードに書き込み  </p>
+</li>
+<li>
+<p>USB On-the-Go Ethernet モードで起動させるための設定<br>
+SDカード（boot）直下のファイルを修正、配置</p>
+<ul>
+<li>config.txtの追記<br>
+<code>config.txt</code>最終行に<code>dtoverlay=dwc2</code>を追加</li>
+<li>commandline.txtの修正<br>
+<code>rootwait</code>の後に <code>modules-load=dwc2,g_ether</code>を追加</li>
+<li>空のsshファイルの作成<br>
+ ファイル名が<code>ssh</code>である空ファイル</li>
+</ul>
+</li>
+<li>
+<p>RaspberryPiをPCと接続</p>
+<ul>
+<li>USBポートをPCと接続（PWR INではない）</li>
+</ul>
+</li>
+<li>
+<p>ネットワークアダプタとして認識させる  </p>
+<ul>
+<li>ドライバ の入手<br>
+<a href="https://caron.ws/wp-content/uploads/telechargement/RPI%20Driver%20OTG.zip">RPI Driver OTG</a></li>
+<li>ドライバの手動設定<br>
+デバイスマネージャから「ポート（COMとLPT）」→ 「USBシリアルデバイス(COM10)」を選択して、ドライバソフトウェアを手動選択  </li>
+</ul>
+</li>
+<li>
+<p>インターネット接続の共有<br>
+  PCのインターネット接続を共有</p>
+</li>
+<li>RaspberryPiにPCからSSHで接続<br>
+初期状態は、 ユーザー名:<code>pi</code> パスワード: <code>raspberry</code></li>
+</ul>
+<p>参考<br>
+<a href="https://qiita.com/Liesegang/items/dcdc669f80d1bf721c21">USB OTGを使ったRapsberry Pi Zero WH のセットアップ - Qiita</a></p>
+<h2>その他初期設定</h2>
+<p>（ubuntuマシンと同じことをすればよいので割愛）</p>
+<h2>-</h2>
             </div>
             <!-- /.entry-content -->
         </article>
