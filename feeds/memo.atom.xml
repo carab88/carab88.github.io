@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Curry and Rice and Beer ! - メモ</title><link href="/" rel="alternate"></link><link href="/feeds/memo.atom.xml" rel="self"></link><id>/</id><updated>2020-05-22T00:00:00+09:00</updated><entry><title>今後書きたいネタ</title><link href="/yokoku.html" rel="alternate"></link><published>2020-05-22T00:00:00+09:00</published><updated>2020-05-22T00:00:00+09:00</updated><author><name>carab88</name></author><id>tag:None,2020-05-22:/yokoku.html</id><summary type="html">&lt;p&gt;今後書きたいことのメモ&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;SoftEther と OpenVPN を使って自宅マシンに外からアクセス&lt;/li&gt;
+&lt;li&gt;ユーザ権限でも実現するシャットダウンスクリプト&lt;/li&gt;
+&lt;li&gt;VSphere で GPU をゲスト OS に割り当てた（が１年間使っていない）&lt;/li&gt;
+&lt;li&gt;右クリックメニューの送る&lt;/li&gt;
+&lt;li&gt;スタートプログラムについて&lt;/li&gt;
+&lt;li&gt;centos をルータにしてしまった&lt;/li&gt;
+&lt;li&gt;無線 LAN は…&lt;/li&gt;
+&lt;li&gt;一般人も ElasticSearch を使いたい&lt;/li&gt;
+&lt;li&gt;UVC （ USB Video Class ）に対応した HDMI から USB に変換するアダプターが欲しい&lt;/li&gt;
+&lt;/ul&gt;</content><category term="メモ"></category><category term="memo"></category></entry></feed>

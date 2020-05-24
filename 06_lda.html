@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>話題に含まれる単語をクラスタに分けする(LDA を使う) - Curry and Rice and Beer !</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/06_lda.html">
+
+        <meta name="author" content="carab88" />
+        <meta name="keywords" content="python,LDA,自然言語処理" />
+        <meta name="description" content="要約する予定が、単語のクラスタ分けのみとなりました" />
+
+        <meta property="og:site_name" content="Curry and Rice and Beer !" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="話題に含まれる単語をクラスタに分けする(LDA を使う)"/>
+        <meta property="og:url" content="/06_lda.html"/>
+        <meta property="og:description" content="要約する予定が、単語のクラスタ分けのみとなりました"/>
+        <meta property="article:published_time" content="2020-05-24" />
+            <meta property="article:section" content="要約ツールつくろう" />
+            <meta property="article:tag" content="python" />
+            <meta property="article:tag" content="LDA" />
+            <meta property="article:tag" content="自然言語処理" />
+            <meta property="article:author" content="carab88" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Curry and Rice and Beer ! ATOM Feed"/>
+
+        <link href="/feeds/yao-yue-tsurutsukurou.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Curry and Rice and Beer ! 要約ツールつくろう ATOM Feed"/>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Curry and Rice and Beer !            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/memo.html">メモ</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<style>
+	#banner{
+	    background-image:url("/images/banner.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>Curry and Rice and Beer !</h1>
+		</div>
+	</div>
+</div><!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="" title="Curry and Rice and Beer !"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="/category/yao-yue-tsurutsukurou.html" title="要約ツールつくろう">要約ツールつくろう</a></li>
+                <li class="active">話題に含まれる単語をクラスタに分けする(LDA を使う)</li>
+            </ol>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/06_lda.html"
+                       rel="bookmark"
+                       title="Permalink to 話題に含まれる単語をクラスタに分けする(LDA を使う)">
+                        話題に含まれる単語をクラスタに分けする(LDA を使う)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/lda.html">LDA</a>
+        /
+	<a href="/tag/zi-ran-yan-yu-chu-li.html">自然言語処理</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>肝心の自然言語はいい加減だからだんだん不安</p>
+<h3>やっていること</h3>
+<ul>
+<li>単語・単語出現回数を持つデータを持つ辞書を作る</li>
+<li>出現頻度を持つデータ（コーパス）を作る</li>
+<li>TF-IDF を使って単語の重要度を抽出</li>
+<li>LDA を使い話題を１０個のクラスタ分け、単語を１５個ずつ抽出する  </li>
+</ul>
+<p>utils.py</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 抜粋</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
+<span class="kn">from</span> <span class="nn">gensim.corpora</span> <span class="kn">import</span> <span class="n">Dictionary</span>
+<span class="kn">from</span> <span class="nn">gensim.models.doc2vec</span> <span class="kn">import</span> <span class="n">TaggedDocument</span>
+<span class="kn">from</span> <span class="nn">gensim</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">classify_contents</span><span class="p">(</span><span class="n">text_tokenized</span><span class="p">):</span>
+    <span class="n">dictionary</span> <span class="o">=</span> <span class="n">Dictionary</span><span class="p">(</span><span class="n">text_tokenized</span><span class="p">)</span>
+    <span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text_tokenized</span><span class="p">]</span>
+    <span class="n">tfidf</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span><span class="n">normalize</span>  <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">corpus_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">[</span><span class="n">corpus</span><span class="p">]</span>
+    <span class="n">lda</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ldamodel</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus_tfidf</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> \
+                <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> \
+                <span class="n">iterations</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="p">,</span><span class="n">eta</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>\
+                <span class="n">random_state</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">passes</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">chunksize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+    <span class="n">topics</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">15</span> <span class="p">,</span><span class="n">formatted</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">topics</span>
+</code></pre></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
+    <li class="list-group-item"><a href="/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
+    <li class="list-group-item"><a href="/02_get-keyword.html">キーワードを受け取る</a></li>
+    <li class="list-group-item"><a href="/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
+    <li class="list-group-item"><a href="/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
+  </ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+
+<!-- Sidebar/Categories -->
+<li class="list-group-item">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
+    <li class="list-group-item">
+      <a href="/category/memo.html"><i class="fa fa-folder-open fa-lg"></i>メモ</a>
+    </li>
+    <li class="list-group-item">
+      <a href="/category/yao-yue-tsurutsukurou.html"><i class="fa fa-folder-open fa-lg"></i>要約ツールつくろう</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Categories -->
+  </ul>
+</section>
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
+
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2020 carab88
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+    <script src="/theme/js/bodypadding.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-167494726-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Articles by carab88 - curry and rice and beer !</title>
+    <title>Articles by carab88 - Curry and Rice and Beer !</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -13,11 +13,11 @@
         <meta name="author" content="carab88" />
 
     <!-- Open Graph tags -->
-        <meta property="og:site_name" content="curry and rice and beer !" />
+        <meta property="og:site_name" content="Curry and Rice and Beer !" />
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="curry and rice and beer !"/>
+        <meta property="og:title" content="Curry and Rice and Beer !"/>
         <meta property="og:url" content=""/>
-        <meta property="og:description" content="curry and rice and beer !"/>
+        <meta property="og:description" content="Curry and Rice and Beer !"/>
 
 
 
@@ -28,6 +28,8 @@
     <link href="/theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="Curry and Rice and Beer ! ATOM Feed"/>
 
 
 </head>
@@ -43,15 +45,15 @@
                 <span class="icon-bar"></span>
             </button>
             <a href="/" class="navbar-brand">
-curry and rice and beer !            </a>
+Curry and Rice and Beer !            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="/category/0.html">0</a>
+                            <a href="/category/memo.html">メモ</a>
                         </li>
                         <li >
-                            <a href="/category/misc.html">Misc</a>
+                            <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -62,231 +64,244 @@ curry and rice and beer !            </a>
 </div> <!-- /.navbar -->
 
 <!-- Banner -->
-<!-- End Banner -->
+<style>
+	#banner{
+	    background-image:url("/images/banner.png");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>Curry and Rice and Beer !</h1>
+		</div>
+	</div>
+</div><!-- End Banner -->
 
 <!-- Content Container -->
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
+        <ol class="breadcrumb">
+            <li><a href="" title="Curry and Rice and Beer !"><i class="fa fa-home fa-lg"></i></a></li>
+            <li><a href="/authors.html" title="Authors">Authors</a></li>
+            <li class="active">carab88</li>
+        </ol>
             <article>
-                <h2><a href="/0.html">My First Review</a></h2>
-                <div class="summary"><p>Curry And Rice And Beer !</p>
-                    <a class="btn btn-default btn-xs" href="/0.html">more ...</a>
+                <h2><a href="/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/raspberrypi.html">RaspberryPi</a>
+        /
+	<a href="/tag/lda.html">LDA</a>
+        /
+	<a href="/tag/python.html">Python</a>
+        /
+	<a href="/tag/gcp.html">GCP</a>
+        /
+	<a href="/tag/wsgy.html">wsgy</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>要約ツールつくろう！の予定があっという間に変わってしまった話</p>
+                    <a class="btn btn-default btn-xs" href="/00_intro.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/googlejian-suo-jie-guo-wozi-dong-yao-yue-suruhe-kawozuo-routoshitaranoni-qi-duitara-raspberry-pi-zero-v13toyou-ndeitajian.html">Google検索結果を自動要約する何かを作ろうとしたらのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></h2>
-                <div class="summary"><h1>Google検索結果を自動要約する何かを作ろうとしたらのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</h1>
-<p>Raspberry Pi Zero v1.3 はフリスクサイズの小さなコンピュータ。
-WifiやEthernetが付いていない。本体とケースがともに660円。<br>
-<img alt="RPZの写真" src=".\aaa.png"></p>
-<h2>きっかけ</h2>
-<p>何かのキーワードを調べるとき私は、
-- 検索エンジンでキーワードを検索
-- 検索結果１件目をぽちっと押して見る
-- 検索結果２件目をぽちっと押して見る
-- (省略)
-- 検索結果５件目をぽちっと押して見る
-- だいたいこんな意味なのかなと納得する</p>
-<p>という手順でやっているけど、ぽちぽちページを開いたり、文章を読んだりするのが面倒。そもそも私は文章を読むのは好きではない。「機械学習で自動要約できるのでは」と思いついた。</p>
-<h2>やろうとしたころ</h2>
-<ul>
-<li>キーワードを受け取る</li>
-<li>Google検索をする</li>
-<li>検索結果上位３件をスクレイピング</li>
-<li>名詞を抽出</li>
-<li>自然言語処理（Word2Vec）で近しい言葉を集める</li>
-<li>それを何とか文章にする</li>
-<li>結果を渡す</li>
-<li>これをAzureか何かのクラウドに乗っける</li>
-</ul>
-<h2>やってしまったこと</h2>
-<p>クラウドに乗っけたら知らない人がアクセスするんじゃないか。Basic認証かけて中身をみられていなくても、アクセスされるのはなんか気味悪い。でもどこからでも使いたいからIPアドレス制限もしたくない。という元SEのくせに変な悪い被害妄想してしまい、クラウド案は却下。</p>
-<ul>
-<li>Raspberry Pi ZeroをWin10から操作する …</li></ul>
-                    <a class="btn btn-default btn-xs" href="/googlejian-suo-jie-guo-wozi-dong-yao-yue-suruhe-kawozuo-routoshitaranoni-qi-duitara-raspberry-pi-zero-v13toyou-ndeitajian.html">more ...</a>
+                <h2><a href="/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/raspberrypi.html">RaspberryPi</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>660 円のラズパイにネットワーク接続を与える</p>
+                    <a class="btn btn-default btn-xs" href="/01_RPZ-WIN10.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/hua-ti-nihan-marerudan-yu-wokurasutanifen-kesurulda-woshi-u.html">話題に含まれる単語をクラスタに分けする(LDA を使う)</a></h2>
-                <div class="summary"><h1>話題に含まれる単語をクラスタに分けする(LDA を使う)</h1>
-<p>肝心の自然言語はいい加減だからだんだん不安</p>
-<h2>やっていること</h2>
-<ul>
-<li>単語・単語出現回数を持つデータを持つ辞書を作る</li>
-<li>出現頻度を持つデータ（コーパス）を作る</li>
-<li>TF-IDFを使って単語の重要度を抽出</li>
-<li>LDAを使い話題を１０個のクラスタ分け、単語を１５個ずつ抽出する</li>
-</ul>
-<p>```python:utils.py</p>
-<h1>抜粋</h1>
-<p>from collections import OrderedDict
-from gensim.corpora import Dictionary
-from gensim.models.doc2vec import TaggedDocument
-from gensim import models
-import numpy as np</p>
-<p>def classify_contents(text_tokenized):
-    dictionary = Dictionary(text_tokenized)
-    corpus = [dictionary.doc2bow(word …</p>
-                    <a class="btn btn-default btn-xs" href="/hua-ti-nihan-marerudan-yu-wokurasutanifen-kesurulda-woshi-u.html">more ...</a>
+                <h2><a href="/02_get-keyword.html">キーワードを受け取る</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">Python</a>
+        /
+	<a href="/tag/bottle.html">bottle</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>WEB アプリの事は詳しくないけど、とりあえず GET からキーワードを受け取る</p>
+                    <a class="btn btn-default btn-xs" href="/02_get-keyword.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/jin-hou-shu-kitaineta.html">今後書きたいネタ</a></h2>
-                <div class="summary"><h1>今後書きたいネタ</h1>
-<ul>
-<li>SoftEtherとOpenVPNを使って自宅マシンに外からアクセス</li>
-<li>ユーザ権限でも実現するシャットダウンスクリプト</li>
-<li>VSphereでGPUをゲストOSに割り当てた（が１年間使っていない）</li>
-<li>送る</li>
-<li>スタート</li>
-<li>centosをルータにしてしまった</li>
-<li>Wifiを…</li>
-<li>一般人もElasticSearchを使いたい</li>
-<li>UVC（USB Video Class）に対応した HDMIからUSBに変換するアダプターが欲しい</li>
-</ul>
-                    <a class="btn btn-default btn-xs" href="/jin-hou-shu-kitaineta.html">more ...</a>
+                <h2><a href="/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/google.html">google</a>
+        /
+	<a href="/tag/gcp.html">gcp</a>
+        /
+	<a href="/tag/api.html">api</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>検索結果をスクレイピングしたら検索結果を渡してくれなくなったのでおとなしく API を使う</p>
+                    <a class="btn btn-default btn-xs" href="/03_gcp.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/kiwadowoshou-kequ-ru.html">キーワードを受け取る</a></h2>
-                <div class="summary"><p>Title: キーワードを受け取る
-Date: 2020-05-22 00:00</p>
-<h1>キーワードを受け取る</h1>
-<h2>キーワードを渡す</h2>
-<p>WEB屋さんの経験なく、GET/POSTはあまり興味ないので、とりあえずGETでキーワードを渡す。<br>
-スマホで使いやすいようにフォントサイズは大きめの
-フォームを用意。CSSベタ打ちです。すみません。</p>
-<p>```html:index.html
-&lt;!DOCTYPE html&gt;
-<html lang="jp">
-  <head>
-    <meta charset="UTF-8" />
-    <title>yykapi</title>
-  </head>
-  <meta name="viewport" content="width=device-width" />
-  <style type="text/css">
-    input[type="text"] {
-      font-size: 160%;
-      width: 77%;
-      margin: 5% 0% 0% 2%;
-      padding: 1% 0%;
-      vertical-align: center;
-    }
-    input[type="submit"] {
-      font-size: 160%;
-      width: 17%;
-      margin: 5% 0% 2 …</style></html></p>
-                    <a class="btn btn-default btn-xs" href="/kiwadowoshou-kequ-ru.html">more ...</a>
+                <h2><a href="/04_scraping.html">上位５件の URL に対してスクレイピング</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/requests.html">requests</a>
+        /
+	<a href="/tag/beautifulsoup4.html">BeautifulSoup4</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>Python プログラムとしてはここまでで良く。多分。マシン側の SSL</p>
+                    <a class="btn btn-default btn-xs" href="/04_scraping.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/ming-ci-toxing-rong-ci-wochou-chu.html">名詞と形容詞を抽出</a></h2>
-                <div class="summary"><h1>名詞と形容詞を抽出</h1>
-<h2>やっていること</h2>
-<ul>
-<li>Mecabを使った形態素解析</li>
-<li>辞書はNEologDを指定</li>
-<li>pタグのテキストは、改行でひとつの文章の区切りとして扱う</li>
-<li>ひとつの文章毎、リスト（配列）に入れる</li>
-<li>力技で名詞と形容詞を抽出して、単語をリストに詰め込む</li>
-<li>文章毎の単語を、次に返却する用のリストに入れる</li>
-</ul>
-<p>```python:utils.py</p>
-<h1>抜粋</h1>
-<p>import MeCab</p>
-<p>def getWordList(text):
-    text_list = []
-    text_list = text.split("\n")
-    # 短い文章無視
-    text_list = [[s] for s in text_list if len(s)&gt;20 ]</p>
-<div class="highlight"><pre><span></span><code><span class="n">mecab</span> <span class="o">=</span> <span class="n">MeCab</span><span class="p">.</span><span class="n">Tagger</span><span class="p">(</span><span class="s1">&#39;-d /usr/lib/arm-linux-gnueabihf/mecab/dic/mecab-ipadic-neologd&#39;</span><span class="p">)</span>
-<span class="n">contents …</span></code></pre></div>
-                    <a class="btn btn-default btn-xs" href="/ming-ci-toxing-rong-ci-wochou-chu.html">more ...</a>
+                <h2><a href="/05_mecab.html">名詞と形容詞を抽出</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/mecab.html">mecab</a>
+        /
+	<a href="/tag/zi-ran-yan-yu-chu-li.html">自然言語処理</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>ほぼ気合で形態素解析</p>
+                    <a class="btn btn-default btn-xs" href="/05_mecab.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/raspberry-pi-zerowowin10karacao-zuo-suru.html">Raspberry Pi ZeroをWin10から操作する</a></h2>
-                <div class="summary"><h1>Raspberry Pi ZeroをWin10から操作する</h1>
-<p>やってみたのメモ</p>
-<h2>MicroSDカード、ケーブルを探す</h2>
-<p>Raspberry Pi ZeroをWin10から操作するために必要なもの
-- コネクタ形状【USB A（オス）】 ― 【USB Micro-B（オス）】 でデータ転送ができるケーブル<br>
-前職が出張多かった関係でケーブルが探すといくつか出てきた</p>
-<ul>
-<li>microSDカード<br>
-家の中を探して見つかったのは容量8G<br>
-NEologD辞書を入れるとぎりぎりの容量<br>
-写真家じゃないので64Gとか持っていない。</li>
-</ul>
-<h2>Win10からSSH接続するための設定</h2>
-<ul>
-<li>
-<p>Raspbian LiteのイメージファイルをSDカードに書き込み  </p>
-</li>
-<li>
-<p>USB On-the-Go Ethernet モードで起動させるための設定<br>
-SDカード（boot）直下のファイルを修正、配置</p>
-<ul>
-<li>config.txtの追記<br>
-<code>config.txt</code>最終行に<code>dtoverlay=dwc2</code>を追加</li>
-<li>commandline.txtの修正<br>
-<code>rootwait</code>の後に <code>modules-load=dwc2,g_ether</code>を追加</li>
-<li>空のsshファイルの作成 …</li></ul></li></ul>
-                    <a class="btn btn-default btn-xs" href="/raspberry-pi-zerowowin10karacao-zuo-suru.html">more ...</a>
+                <h2><a href="/06_lda.html">話題に含まれる単語をクラスタに分けする(LDA を使う)</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-24T00:00:00+09:00"> 2020-05-24(日)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/yao-yue-tsurutsukurou.html">要約ツールつくろう</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+        /
+	<a href="/tag/lda.html">LDA</a>
+        /
+	<a href="/tag/zi-ran-yan-yu-chu-li.html">自然言語処理</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>要約する予定が、単語のクラスタ分けのみとなりました</p>
+                    <a class="btn btn-default btn-xs" href="/06_lda.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="/shang-wei-5jian-no-url-nidui-shitesukureipingu.html">上位５件の URL に対してスクレイピング</a></h2>
-                <div class="summary"><h1>上位５件の URL に対してスクレイピング</h1>
-<p>やっていること
-- requestsでWEBページをにアクセス
-- ユーザエージェントを指定<br>
-ブラウザからアクセスしたとみなすため
-- pdfは処理をスキップする
-- HTMLの抽出はBeautifulSoupを使う
-- pタグを抽出
-- １秒以上の間隔を持たせるため、待機時間を挿入</p>
-<p>```python:utils.py</p>
-<h1>抜粋</h1>
-<p>import requests
-import time
-from bs4 import BeautifulSoup</p>
-<p>def getPages(urls):
-　　# UAの指定
-    ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
-    "AppleWebKit/537.36 (KHTML, like Gecko) " \
-    "Chrome/81.0.4044.129 Safari …</p>
-                    <a class="btn btn-default btn-xs" href="/shang-wei-5jian-no-url-nidui-shitesukureipingu.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/zhi-ding-kiwadonitsuite-google-jian-suo-jie-guo-shang-wei-5jian-no-url-womorau.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></h2>
-                <div class="summary"><h1>指定キーワードについて、Google 検索結果上位５件の URL をもらう</h1>
-<h2>Google Custom Search API の設定</h2>
-<p>Google 検索結果をスクレイピングしていたら「あんたロボットでしょ」と結果を見せてくれなくなったので、API を使う。<br>
-やったことは</p>
-<ul>
-<li>Google Cloud Platform の API を使うためのキーを取得</li>
-<li>検索結果を取得する Custom Search API を有効化</li>
-<li>検索条件を指定できる　 Custom Search Engine の設定</li>
-</ul>
-<p>下記を参考に設定<br>
-<a href="https://qiita.com/zak_y/items/42ca0f1ea14f7046108c">Custom Search API を使って Google 検索結果を取得する - Qiita</a></p>
-<h2>URLの取得</h2>
-<p>自分しか見ないしまぁいいかなと思い、ソースコードにKEYとIDを直打ち</p>
-<p>```python:utils.py</p>
-<h1>抜粋</h1>
-<p>from googleapiclient …</p>
-                    <a class="btn btn-default btn-xs" href="/zhi-ding-kiwadonitsuite-google-jian-suo-jie-guo-shang-wei-5jian-no-url-womorau.html">more ...</a>
+                <h2><a href="/yokoku.html">今後書きたいネタ</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2020-05-22T00:00:00+09:00"> 2020-05-22(金)</time>
+    </span>
+
+
+
+        <span class="label label-default">Category</span>
+        <a href="/category/memo.html">メモ</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/memo.html">memo</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>今後書きたいことのメモ</p>
+                    <a class="btn btn-default btn-xs" href="/yokoku.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -298,35 +313,32 @@ from bs4 import BeautifulSoup</p>
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
 
-<!-- Sidebar/Social -->
+<!-- Sidebar/Recent Posts -->
 <li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-  <ul class="list-group" id="social">
-    <li class="list-group-item"><a href="#"><i class="fa fa-you-can-add-links-in-your-config-file-square fa-lg"></i> You can add links in your config file</a></li>
-    <li class="list-group-item"><a href="#"><i class="fa fa-another-social-link-square fa-lg"></i> Another social link</a></li>
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+  <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
+    <li class="list-group-item"><a href="/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
+    <li class="list-group-item"><a href="/02_get-keyword.html">キーワードを受け取る</a></li>
+    <li class="list-group-item"><a href="/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
+    <li class="list-group-item"><a href="/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
   </ul>
 </li>
-<!-- End Sidebar/Social -->
+<!-- End Sidebar/Recent Posts -->
 
-<!-- Sidebar/Links -->
+<!-- Sidebar/Categories -->
 <li class="list-group-item">
-  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
-  <ul class="list-group" id="links">
+  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4>
+  <ul class="list-group" id="categories">
     <li class="list-group-item">
-      <a href="http://getpelican.com/" target="_blank">Pelican</a>
+      <a href="/category/memo.html"><i class="fa fa-folder-open fa-lg"></i>メモ</a>
     </li>
     <li class="list-group-item">
-      <a href="http://python.org/" target="_blank">Python.org</a>
-    </li>
-    <li class="list-group-item">
-      <a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a>
-    </li>
-    <li class="list-group-item">
-      <a href="#" target="_blank">You can modify those links in your config file</a>
+      <a href="/category/yao-yue-tsurutsukurou.html"><i class="fa fa-folder-open fa-lg"></i>要約ツールつくろう</a>
     </li>
   </ul>
 </li>
-<!-- End Sidebar/Links -->
+<!-- End Sidebar/Categories -->
   </ul>
 </section>
 <!-- End Sidebar -->            </aside>
@@ -356,6 +368,24 @@ from bs4 import BeautifulSoup</p>
 <script src="/theme/js/respond.min.js"></script>
 
 
+    <script src="/theme/js/bodypadding.js"></script>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-167494726-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End Google Analytics Code -->
 
 
 </body>
