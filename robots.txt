@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+Allow:
+
+Sitemap: https://carab88.github.io/sitemap.xml
