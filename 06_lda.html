@@ -13,13 +13,13 @@
 
         <meta name="author" content="carab88" />
         <meta name="keywords" content="python,LDA,自然言語処理" />
-        <meta name="description" content="要約する予定が、単語のクラスタ分けのみとなりました" />
+        <meta name="description" content="当初は要約文章を作ろうと思っていた。しかし感覚的に今回は LDA によるクラスタ分け結果を表示するだけで十分な気がしてきた。というよりもうお腹いっぱいになってきたので、そうすることにした。計算させるときのパラメータは昔使った値のまま。今思うとデフォルトの値でよかった気がする。" />
 
         <meta property="og:site_name" content="Curry and Rice and Beer !" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="話題に含まれる単語をクラスタに分けする(LDA を使う)"/>
         <meta property="og:url" content="https://carab88.github.io/06_lda.html"/>
-        <meta property="og:description" content="要約する予定が、単語のクラスタ分けのみとなりました"/>
+        <meta property="og:description" content="当初は要約文章を作ろうと思っていた。しかし感覚的に今回は LDA によるクラスタ分け結果を表示するだけで十分な気がしてきた。というよりもうお腹いっぱいになってきたので、そうすることにした。計算させるときのパラメータは昔使った値のまま。今思うとデフォルトの値でよかった気がする。"/>
         <meta property="article:published_time" content="2020-05-24" />
             <meta property="article:section" content="要約ツールつくろう" />
             <meta property="article:tag" content="python" />
@@ -131,7 +131,7 @@ Curry and Rice and Beer !            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>肝心の自然言語はいい加減だからだんだん不安</p>
+                <p>肝心の自然言語処理の部分はいい加減。当初は要約文章を作ろうと思っていたのに、気づいたら単語のクラスタ分けで終わってしまった。お腹いっぱいで、ほかの事に手が付けられない。  </p>
 <h3>やっていること</h3>
 <ul>
 <li>単語・単語出現回数を持つデータを持つ辞書を作る</li>
@@ -160,6 +160,9 @@ Curry and Rice and Beer !            </a>
     <span class="n">topics</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_words</span> <span class="o">=</span> <span class="mi">15</span> <span class="p">,</span><span class="n">formatted</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">topics</span>
 </code></pre></div>
+
+
+<p>モデルを回すときのパラメータは昔使った値のまま。今思うとデフォルトの値でよかった気がする。</p>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -171,19 +174,6 @@ Curry and Rice and Beer !            </a>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
-
-<!-- Sidebar/Recent Posts -->
-<li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-  <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="https://carab88.github.io/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/02_get-keyword.html">キーワードを受け取る</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
-  </ul>
-</li>
-<!-- End Sidebar/Recent Posts -->
 
 <!-- Sidebar/Categories -->
 <li class="list-group-item">

@@ -13,13 +13,13 @@
 
         <meta name="author" content="carab88" />
         <meta name="keywords" content="python,mecab,自然言語処理" />
-        <meta name="description" content="ほぼ気合で形態素解析" />
+        <meta name="description" content="取得した文章から単語を抽出。Mecab を使い、辞書は NEologd を指定。単語の集め方についてはもっと良いやり方ありそうだけど、思いつくまま、ほぼ気合で実装。これが正しいかは不明。名詞と形容詞を対象に、ストップワードもベタ打ちで指定。for 文グルグル使っているので目が回りそう。" />
 
         <meta property="og:site_name" content="Curry and Rice and Beer !" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="名詞と形容詞を抽出"/>
         <meta property="og:url" content="https://carab88.github.io/05_mecab.html"/>
-        <meta property="og:description" content="ほぼ気合で形態素解析"/>
+        <meta property="og:description" content="取得した文章から単語を抽出。Mecab を使い、辞書は NEologd を指定。単語の集め方についてはもっと良いやり方ありそうだけど、思いつくまま、ほぼ気合で実装。これが正しいかは不明。名詞と形容詞を対象に、ストップワードもベタ打ちで指定。for 文グルグル使っているので目が回りそう。"/>
         <meta property="article:published_time" content="2020-05-24" />
             <meta property="article:section" content="要約ツールつくろう" />
             <meta property="article:tag" content="python" />
@@ -134,12 +134,13 @@ Curry and Rice and Beer !            </a>
                 <h3>やっていること</h3>
 <ul>
 <li>Mecab を使った形態素解析</li>
-<li>辞書は NEologD を指定</li>
-<li>p タグのテキストは、改行でひとつの文章の区切りとして扱う</li>
+<li>辞書は NEologd を指定</li>
+<li>p タグのテキストは、改行もひとつの文章の区切りとして扱う</li>
 <li>ひとつの文章毎、リスト（配列）に入れる</li>
 <li>力技で名詞と形容詞を抽出して、単語をリストに詰め込む</li>
 <li>文章毎の単語を、次に返却する用のリストに入れる</li>
 </ul>
+<p>単語の集め方についてはもっと良いやり方ができそうだけど、思いつくまま、ほぼ気合で実装。</p>
 <p>utils.py</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 抜粋</span>
 <span class="kn">import</span> <span class="nn">MeCab</span>
@@ -174,6 +175,9 @@ Curry and Rice and Beer !            </a>
         <span class="n">text_tokenized</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">text_tokenized</span>
 </code></pre></div>
+
+
+<p>これが正しいかは今も不明。名詞と形容詞を対象に、ストップワードもベタ打ちで指定。for 文グルグル使っているので目が回りそう。</p>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -185,19 +189,6 @@ Curry and Rice and Beer !            </a>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
-
-<!-- Sidebar/Recent Posts -->
-<li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-  <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="https://carab88.github.io/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/02_get-keyword.html">キーワードを受け取る</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
-  </ul>
-</li>
-<!-- End Sidebar/Recent Posts -->
 
 <!-- Sidebar/Categories -->
 <li class="list-group-item">

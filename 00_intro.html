@@ -180,7 +180,8 @@ Wifi や Ethernet が付いていない。本体とケースがともに 660 円
 </ul>
 </li>
 <li>Python プログラム作り<ul>
-<li>仮想環境（ venv)上に必要なモジュールをインストール</li>
+<li>仮想環境(venv)上に必要なモジュールをインストール<br>
+追加で pyOpenSSL 入れないと、WEB にアクセスしたとき、<code>SSLError: [SSL: DH_KEY_TOO_SMALL]</code>で失敗する。</li>
 <li><a href="02_get-keyword.html">キーワードを受け取る</a></li>
 <li><a href="03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
 <li><a href="04_scraping.html">上位５件の URL に対してスクレイピング（ PDF は除く）</a></li>
@@ -219,19 +220,6 @@ Wifi や Ethernet が付いていない。本体とケースがともに 660 円
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
-
-<!-- Sidebar/Recent Posts -->
-<li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-  <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="https://carab88.github.io/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/02_get-keyword.html">キーワードを受け取る</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
-  </ul>
-</li>
-<!-- End Sidebar/Recent Posts -->
 
 <!-- Sidebar/Categories -->
 <li class="list-group-item">

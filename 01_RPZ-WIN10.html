@@ -13,13 +13,13 @@
 
         <meta name="author" content="carab88" />
         <meta name="keywords" content="RaspberryPi" />
-        <meta name="description" content="660 円のラズパイにネットワーク接続を与える" />
+        <meta name="description" content="６６０円ラズパイのセットアップをした。OS 起動用の SD カードは眠っていた８Ｇを、パソコンにつなぐケーブルは昔の出張道具を使用。そもそも WiFi が搭載されていない状態で初期設定できるかと疑問に思いながらも、コンピュータの基礎知識を思い出し、Google 先生に助けを求めながら進めた。" />
 
         <meta property="og:site_name" content="Curry and Rice and Beer !" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Raspberry Pi ZeroをWin10から操作する"/>
         <meta property="og:url" content="https://carab88.github.io/01_RPZ-WIN10.html"/>
-        <meta property="og:description" content="660 円のラズパイにネットワーク接続を与える"/>
+        <meta property="og:description" content="６６０円ラズパイのセットアップをした。OS 起動用の SD カードは眠っていた８Ｇを、パソコンにつなぐケーブルは昔の出張道具を使用。そもそも WiFi が搭載されていない状態で初期設定できるかと疑問に思いながらも、コンピュータの基礎知識を思い出し、Google 先生に助けを求めながら進めた。"/>
         <meta property="article:published_time" content="2020-05-24" />
             <meta property="article:section" content="要約ツールつくろう" />
             <meta property="article:tag" content="RaspberryPi" />
@@ -125,18 +125,25 @@ Curry and Rice and Beer !            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>やってみた事のメモ</p>
-<h3>MicroSD カード、ケーブルを探す</h3>
-<p>Raspberry Pi Zero を Win10 から操作するために必要なものを準備<br>
-- コネクタ形状【USB A （オス）】 ― 【USB Micro-B （オス）】 でデータ転送ができるケーブル<br>
-前職が出張多かった関係でケーブルが探すといくつか出てきた</p>
+                <p>ラズパイのセットアップでやってみた事のメモ</p>
+<h3>USB データ転送ケーブルと MicroSD カードを探す</h3>
+<p>Raspberry Pi Zero を Win10 から操作するために必要なものを準備  </p>
 <ul>
-<li>microSD カード<br>
+<li>
+<p>コネクタ形状【USB A （オス）】 ― 【USB Micro-B （オス）】 でデータ転送ができるケーブル<br>
+前職が出張多かった関係でケーブルが探すといくつか出てきた  </p>
+</li>
+<li>
+<p>microSD カード<br>
 家の中を探して見つかったのは容量 8G<br>
 NEologd 辞書を入れるとぎりぎりの容量<br>
-写真家じゃないので 64G とか持っていない。</li>
+写真家じゃないので 64G とか持っていない。</p>
+</li>
 </ul>
 <h3>Win10 から SSH 接続するための設定</h3>
+<p>GUI でラズパイを動かす必要はないので、OS は Raspbian Lite をインストール。OS は SSH 接続から操作する。USB 接続を Ethernet として認識させることでネットワーク接続を実現する。  </p>
+<p>参考<br>
+<a href="https://qiita.com/Liesegang/items/dcdc669f80d1bf721c21">USB OTG を使った Rapsberry Pi Zero WH のセットアップ - Qiita</a>  </p>
 <ul>
 <li>
 <p>Raspbian Lite のイメージファイルを SD カードに書き込み  </p>
@@ -150,13 +157,13 @@ SD カード（ boot ）直下のファイルを修正、配置</p>
 <li>commandline.txt の修正<br>
 <code>rootwait</code>の後に <code>modules-load=dwc2,g_ether</code>を追加</li>
 <li>空の ssh ファイルの作成<br>
- ファイル名が<code>ssh</code>である空ファイル</li>
+ ファイル名が<code>ssh</code>である空ファイル  </li>
 </ul>
 </li>
 <li>
 <p>RaspberryPi を PC と接続</p>
 <ul>
-<li>USB ポートを PC と接続（ PWR IN ではない）</li>
+<li>USB ポートを PC と接続（ PWR IN ではない）  </li>
 </ul>
 </li>
 <li>
@@ -170,15 +177,13 @@ SD カード（ boot ）直下のファイルを修正、配置</p>
 </li>
 <li>
 <p>インターネット接続の共有<br>
-  PC のインターネット接続を共有</p>
+  PC のインターネット接続をラズパイと共有</p>
 </li>
 <li>RaspberryPi に PC から SSH で接続<br>
 初期状態は、 ユーザー名:<code>pi</code> パスワード: <code>raspberry</code></li>
 </ul>
-<p>参考<br>
-<a href="https://qiita.com/Liesegang/items/dcdc669f80d1bf721c21">USB OTG を使った Rapsberry Pi Zero WH のセットアップ - Qiita</a></p>
-<h2>その他初期設定</h2>
-<p>（ ubuntu マシンの初期設定と同じことを実施。今回は割愛。）</p>
+<h3>その他初期設定</h3>
+<p>ubuntu マシンの初期設定と同じようなことをやる。今回は割愛。</p>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -190,19 +195,6 @@ SD カード（ boot ）直下のファイルを修正、配置</p>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
-
-<!-- Sidebar/Recent Posts -->
-<li class="list-group-item">
-  <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
-  <ul class="list-group" id="recentposts">
-    <li class="list-group-item"><a href="https://carab88.github.io/00_intro.html">Google検索結果を要約する何かを作ろうとしたのに、気づいたら Raspberry Pi Zero v1.3と遊んでいた件</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/01_RPZ-WIN10.html">Raspberry Pi ZeroをWin10から操作する</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/02_get-keyword.html">キーワードを受け取る</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/03_gcp.html">指定キーワードについて、Google 検索結果上位５件の URL をもらう</a></li>
-    <li class="list-group-item"><a href="https://carab88.github.io/04_scraping.html">上位５件の URL に対してスクレイピング</a></li>
-  </ul>
-</li>
-<!-- End Sidebar/Recent Posts -->
 
 <!-- Sidebar/Categories -->
 <li class="list-group-item">
