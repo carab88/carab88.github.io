@@ -11,9 +11,3 @@ window.addEventListener('load', function() {
 	}
 });
 
-
-// UAの出力
-window.addEventListener('load', function() {
-	var target = document.getElementById('ua');
-	target.textContent = navigator.userAgent;
-});
