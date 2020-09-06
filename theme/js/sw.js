@@ -1,3 +1,6 @@
+self.addEventListener('fetch', function(event) {
+});
+
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('store').then(function(cache) {
@@ -16,3 +19,4 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
+
