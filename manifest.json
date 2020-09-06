@@ -1,0 +1,14 @@
+{
+	"name": "carab88-testblog",
+	"short_name": "carab88",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#C4C4C4",
+	"description": "uuu--uuu",
+	"icons": [{
+
+	  "src": "images/ka.png",
+	  "sizes": "192x192",
+	  "type": "image/png"
+	}]
+  }
