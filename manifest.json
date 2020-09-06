@@ -1,7 +1,7 @@
 {
 	"name": "carab88-testblog",
 	"short_name": "carab88",
-	"start_url": ".",
+	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#C4C4C4",
 	"description": "uuu--uuu",
